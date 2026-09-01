@@ -28,4 +28,12 @@ mkdir -p "${output_dir}"
 archive="${output_dir}/kungfu-ifs-companion-v${version}.tar.gz"
 tar -czf "${archive}" -C "${repo_root}/skill" kungfu-ifs-companion
 
+zip_archive="${output_dir}/kungfu-ifs-companion-v${version}.zip"
+# SkillHub rejects extensionless metadata entries; the source and TAR archive
+# still carry the license and version files, while the marketplace ZIP omits
+# only those platform-incompatible entries.
+rm -f "${zip_archive}"
+(cd "${skill_dir}" && zip -qr "${zip_archive}" . -x 'LICENSE' '*/LICENSE' 'VERSION' '*/VERSION')
+
 printf 'Created %s\n' "${archive}"
+printf 'Created %s\n' "${zip_archive}"

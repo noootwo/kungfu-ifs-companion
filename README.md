@@ -52,7 +52,7 @@ Distribute only `skill/kungfu-ifs-companion/`, not the surrounding development d
 ./scripts/package.sh
 ```
 
-The release archive is written to `dist/`. The skill uses the MIT license; see `skill/kungfu-ifs-companion/LICENSE`.
+The release archives are written to `dist/`. Use the ZIP archive for SkillHub; it places `SKILL.md` at the archive root and omits only the platform-incompatible extensionless `LICENSE` and `VERSION` entries. The source and TAR archive retain the MIT license and version metadata; see `skill/kungfu-ifs-companion/LICENSE` and `skill/kungfu-ifs-companion/VERSION`.
 
 ## Hermes Integration
 
