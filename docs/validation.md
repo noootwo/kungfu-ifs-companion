@@ -35,15 +35,15 @@ Skill is valid!
 当前发布包：
 
 ```text
-dist/kungfu-ifs-companion-v0.1.3.tar.gz
-dist/kungfu-ifs-companion-v0.1.3.zip
+dist/kungfu-ifs-companion-v0.1.4.tar.gz
+dist/kungfu-ifs-companion-v0.1.4.zip
 ```
 
 附加语言包：
 
 ```text
-dist/kungfu-ifs-companion-zh-v0.1.3.tar.gz
-dist/kungfu-ifs-companion-zh-v0.1.3.zip
+dist/kungfu-ifs-companion-zh-v0.1.4.tar.gz
+dist/kungfu-ifs-companion-zh-v0.1.4.zip
 ```
 
 ## 前向测试用例
@@ -83,3 +83,11 @@ dist/kungfu-ifs-companion-zh-v0.1.3.zip
 - 现实检验：承接恐惧，不确认无法核实的信念。
 
 该语言包的结构验证由 `./scripts/test_zh_layout.sh` 执行；实际模型前向测试应在平台审核后继续记录。
+
+## 一键发布
+
+```bash
+./scripts/publish_skillhub.sh
+```
+
+脚本会重新生成语言包并调用 SkillHub CLI 提交。`0.1.4` 已提交成功，平台返回内容审核和安全扫描进行中；Token 不会写入仓库。

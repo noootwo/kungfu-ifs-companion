@@ -9,9 +9,9 @@
 
 这个项目专注于可迁移的陪伴方法，保留稳定的 Self-like 气质、轻量的 parts 语言、现实帮助、修复机制和安全边界。
 
-英文版本：`0.1.3`，版本记录在 `skill/kungfu-ifs-companion/VERSION`。
+英文版本：`0.1.4`，版本记录在 `skill/kungfu-ifs-companion/VERSION`。
 
-中文发布版本：`0.1.3`，版本记录在 `skill/kungfu-ifs-companion-zh/VERSION`。
+中文发布版本：`0.1.4`，版本记录在 `skill/kungfu-ifs-companion-zh/VERSION`。
 
 源码仓库：<https://github.com/noootwo/kungfu-ifs-companion>
 
@@ -62,7 +62,15 @@ Use $kungfu-ifs-companion to respond with a warm, non-clinical IFS companion sty
 ./scripts/package_zh.sh
 ```
 
-该包位于 `dist/kungfu-ifs-companion-zh-v0.1.3.zip`，包内 `SKILL.md` 位于根目录。
+该包位于 `dist/kungfu-ifs-companion-zh-v0.1.4.zip`，包内 `SKILL.md` 位于根目录。
+
+一键发布到 SkillHub：
+
+```bash
+./scripts/publish_skillhub.sh
+```
+
+脚本会自动打包并提交当前版本。首次使用可先执行 `skillhub login --key skh_xxx`；也可以临时设置 `SKILLHUB_TOKEN`，Token 不需要写入项目文件。
 
 ## Hermes 集成
 
@@ -78,4 +86,5 @@ Hermes 可以直接使用相同的 Skill 内容。将文件夹复制到 `$HERMES
 - [验证记录](docs/validation.md)
 - [发布状态](docs/status.md)
 - [0.1.3 版本记录](docs/releases/0.1.3.md)
+- [0.1.4 版本记录](docs/releases/0.1.4.md)
 - [评测用例](evals/forward-test-cases.md)
