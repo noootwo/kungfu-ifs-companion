@@ -1,61 +1,70 @@
 # kungfu-ifs-companion
 
-`kungfu-ifs-companion` is a lightweight skill project for building and using a warm, non-clinical IFS-inspired companion style with a single AI agent such as Codex or Hermes.
+`kungfu-ifs-companion` 是一个轻量级 Skill 项目，用于让 Codex、Hermes 等单智能体以温暖、非临床化、受 IFS 启发的方式进行心理陪伴和内在探索。
 
-The project keeps two things separate:
+本项目将两部分明确分开：
 
-- `skill/kungfu-ifs-companion/`: the actual distributable skill.
-- `docs/`: development background, design rationale, usage notes, and validation notes.
+- `skill/kungfu-ifs-companion/`：实际可分发的 Skill。
+- `docs/`：开发背景、设计取舍、使用说明、验证记录和发布状态。
 
-The skill is intentionally instruction-only. It does not recreate Mind Isle's app runtime, planner contracts, trace pipeline, WebSocket protocol, or memory infrastructure. Its job is to preserve the reusable companion method: Self-like presence, light parts language, repair, practical help, and safety-aware boundaries.
+这个 Skill 不是 Mind Isle APP 的运行时复刻。它不包含 planner 合同、trace 管线、WebSocket 协议或记忆基础设施，而是保留可迁移的陪伴方法：稳定的 Self-like 气质、轻量的 parts 语言、现实帮助、修复机制和安全边界。
 
-Current release: `0.1.1`, recorded in `skill/kungfu-ifs-companion/VERSION`.
+当前版本：`0.1.1`，版本记录在 `skill/kungfu-ifs-companion/VERSION`。
 
-Public source: `https://github.com/noootwo/kungfu-ifs-companion`.
+源码仓库：<https://github.com/noootwo/kungfu-ifs-companion>
 
-## Install Locally
+## 本地安装
 
-Copy or sync the skill folder into the Codex skills directory:
+将 Skill 文件夹复制或同步到 Codex 的 Skills 目录：
 
 ```bash
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
 cp -R skill/kungfu-ifs-companion "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
-Then start a new Codex task and invoke:
+然后新建一个 Codex 任务并调用：
 
 ```text
 Use $kungfu-ifs-companion to respond with a warm, non-clinical IFS companion style.
 ```
 
-## Validate
+## 验证
 
-From the project root, run the project validation entrypoint:
+在项目根目录运行基础验证：
 
 ```bash
 ./scripts/validate.sh
 ```
 
-The entrypoint checks the skill metadata and that all referenced files exist. It uses the Codex validator, so the Python environment must include `PyYAML`.
+该命令会检查 Skill 元数据以及所有引用文件是否存在，依赖 Python 环境中的 `PyYAML`。
 
-To verify the layout expected by Hermes skill installation:
+验证 Hermes 所需的目录结构：
 
 ```bash
 ./scripts/test_hermes_layout.sh
 ```
 
-## Package For Distribution
+## 打包发布
 
-Distribute only `skill/kungfu-ifs-companion/`, not the surrounding development docs:
+只分发 `skill/kungfu-ifs-companion/`，不要把外层开发文档混入 Skill 包：
 
 ```bash
 ./scripts/package.sh
 ```
 
-The release archives are written to `dist/`. Use the ZIP archive for SkillHub; it places `SKILL.md` at the archive root and omits only the platform-incompatible extensionless `LICENSE` and `VERSION` entries. The source and TAR archive retain the MIT license and version metadata; see `skill/kungfu-ifs-companion/LICENSE` and `skill/kungfu-ifs-companion/VERSION`.
+归档文件会写入 `dist/`。SkillHub 使用 ZIP 包：它会将 `SKILL.md` 放在归档根目录，并排除平台不接受的无扩展名 `LICENSE` 和 `VERSION` 文件。源码目录和 TAR 包仍保留 MIT 许可证及版本元数据。
 
-## Hermes Integration
+## Hermes 集成
 
-Hermes can use the same skill content through its local skill directory. Copy the folder to `$HERMES_HOME/skills/kungfu-ifs-companion`, then preload it with `--skills kungfu-ifs-companion`. Load `SKILL.md` as the core instruction and load the relevant files under `references/` on demand.
+Hermes 可以直接使用相同的 Skill 内容。将文件夹复制到 `$HERMES_HOME/skills/kungfu-ifs-companion`，再通过 `--skills kungfu-ifs-companion` 预加载。运行时以 `SKILL.md` 作为核心指令，并按需读取 `references/` 下的参考资料。
 
-The smoke test stages the skill under `$HERMES_HOME/skills/kungfu-ifs-companion` in a temporary directory, asks Hermes to discover it, and verifies that `prompt-size --json` includes its `SKILL.md`. It does not call an inference provider.
+项目中的冒烟测试会把 Skill 临时放入 `$HERMES_HOME/skills/kungfu-ifs-companion`，检查 Hermes 能发现它，并确认 `prompt-size --json` 包含该 Skill 的 `SKILL.md`。该测试不会调用推理模型。
+
+## 文档导航
+
+- [开发背景](docs/development-background.md)
+- [设计取舍](docs/design-rationale.md)
+- [使用说明](docs/usage.md)
+- [验证记录](docs/validation.md)
+- [发布状态](docs/status.md)
+- [评测用例](evals/forward-test-cases.md)

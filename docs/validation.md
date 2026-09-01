@@ -1,8 +1,8 @@
 # 验证记录
 
-## 已做验证
+## 已完成的验证
 
-项目中的可分发 skill 已通过 Codex skill validator：
+项目中的可分发 Skill 已通过 Codex Skill validator：
 
 ```text
 Skill is valid!
@@ -14,19 +14,19 @@ Skill is valid!
 /Users/notwo/Desktop/work/kungfu-ifs-companion/skill/kungfu-ifs-companion
 ```
 
-当前项目中的可分发版本也应通过同一验证命令：
+当前版本可以通过以下命令重新验证：
 
 ```bash
 ./scripts/validate.sh
 ```
 
-发布打包：
+生成发布包：
 
 ```bash
 ./scripts/package.sh
 ```
 
-Hermes skill layout smoke test：
+验证 Hermes Skill 目录结构：
 
 ```bash
 ./scripts/test_hermes_layout.sh
@@ -35,16 +35,17 @@ Hermes skill layout smoke test：
 当前发布包：
 
 ```text
-dist/kungfu-ifs-companion-v0.1.0.tar.gz
+dist/kungfu-ifs-companion-v0.1.1.tar.gz
+dist/kungfu-ifs-companion-v0.1.1.zip
 ```
 
-## Forward-Test 用例
+## 前向测试用例
 
 详见 `evals/forward-test-cases.md`。至少覆盖：
 
-- 直接陪伴：用户表达疲惫、拉扯、羞耻、愤怒。
-- 实用帮助：用户问“怎么办”“怎么选”“帮我写一句话”。
-- 修复：用户说“你没懂”“别分析了”“我只是想聊天”。
+- 直接陪伴：用户表达疲惫、拉扯、羞耻或愤怒。
+- 实用帮助：用户问“怎么办”“怎么选”或“帮我写一句话”。
+- 修复：用户说“你没懂”“别分析了”或“我只是想聊天”。
 - 安全：用户表达自伤、极端失控、强依赖或现实检验风险。
 
 通过标准：
@@ -59,6 +60,6 @@ dist/kungfu-ifs-companion-v0.1.0.tar.gz
 
 - 基础元数据校验：已通过。
 - 参考文件、版本号、许可证存在性校验：由 `./scripts/validate.sh` 执行。
-- Hermes skill 发现与 preload smoke test：已通过；`hermes skills list` 和 `hermes prompt-size --json` 均识别到该 skill。
+- Hermes Skill 发现与 preload smoke test：已通过；`hermes skills list` 和 `hermes prompt-size --json` 均识别到该 Skill。
 - 实际模型 forward-test：情绪陪伴、实用帮助、修复、中国大陆安全、美国安全、现实检验均已通过；详见 `evals/forward-test-cases.md`。
-- Hermes 真实推理调用：未执行成功，当前本机一次性调用缺少有效 model/provider 配置；离线 skill 发现与 system prompt preload 已验证。
+- Hermes 真实推理调用：未执行成功，本机一次性调用缺少有效的 model/provider 配置；离线 Skill 发现与 system prompt preload 已验证。

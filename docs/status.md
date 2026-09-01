@@ -1,22 +1,22 @@
-# Distribution Status
+# 发布状态
 
-Last checked: September 1, 2026
+最后检查时间：2026 年 9 月 1 日
 
-## Release
+## 版本信息
 
-- Skill: `kungfu-ifs-companion`
-- Version: `0.1.1`
-- License: MIT
-- Local validation: passed with `./scripts/validate.sh` and `./scripts/test_hermes_layout.sh`
-- Release archives: generated locally by `./scripts/package.sh`; SkillHub upload uses the ZIP archive with `SKILL.md` at its root and without the platform-incompatible extensionless `LICENSE` and `VERSION` entries.
+- Skill：`kungfu-ifs-companion`
+- 版本：`0.1.1`
+- 许可证：MIT
+- 本地验证：`./scripts/validate.sh` 和 `./scripts/test_hermes_layout.sh` 已通过。
+- 发布归档：由 `./scripts/package.sh` 生成；SkillHub 使用 ZIP 包，`SKILL.md` 位于归档根目录，并排除平台不接受的无扩展名 `LICENSE` 和 `VERSION` 文件。
 
-## Platforms
+## 平台状态
 
-| Platform | Status | Notes |
+| 平台 | 状态 | 说明 |
 | --- | --- | --- |
-| GitHub | Published | Public source repository: `noootwo/kungfu-ifs-companion`; `v0.1.0` and `v0.1.1` releases are published. |
-| Hermes | In progress | PR [#100197](https://github.com/NousResearch/hermes-agent/pull/100197) is open; local discovery/preload passed and the scan result is `SAFE`. |
-| ClawHub | Blocked on login | The local CLI is installed, but no ClawHub token is available. |
-| Tencent SkillHub | Submitted, under review | `Kungfu IFS Companion` v0.1.1 was submitted from the authenticated `noootwo` account on September 1, 2026; the dashboard shows `安全审核中`. |
+| GitHub | 已发布 | 公开源码仓库：`noootwo/kungfu-ifs-companion`；`v0.1.0` 和 `v0.1.1` 已发布。 |
+| Hermes | 进行中 | PR [#100197](https://github.com/NousResearch/hermes-agent/pull/100197) 已创建；本地发现和预加载验证通过，扫描结果为 `SAFE`。 |
+| ClawHub | CLI 授权待完成 | CLI 已安装，但本地尚未检测到有效令牌；需要完成设备授权后才能发布。 |
+| 腾讯 SkillHub | 已提交，审核中 | `Kungfu IFS Companion` v0.1.1 已于 2026 年 9 月 1 日通过已认证的 `noootwo` 账号提交；后台显示“安全审核中”。 |
 
-Statuses in this file are updated only after a fresh command or platform check.
+本文件只在完成新的命令或平台检查后更新状态。
