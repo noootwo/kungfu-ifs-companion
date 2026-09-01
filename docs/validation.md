@@ -91,3 +91,11 @@ dist/kungfu-ifs-companion-zh-v0.1.4.zip
 ```
 
 脚本会重新生成语言包并调用 SkillHub CLI 提交。`0.1.4` 已提交成功，平台返回内容审核和安全扫描进行中；Token 不会写入仓库。
+
+## 全平台发布
+
+```bash
+./scripts/publish_all.sh
+```
+
+该命令先并发生成英文与附加语言包，再并发执行 SkillHub 与 ClawHub 发布。任一平台失败时会输出对应日志并以非零状态退出，同时保留另一平台的发布结果。

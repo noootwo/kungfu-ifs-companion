@@ -11,7 +11,7 @@
 
 英文版本：`0.1.4`，版本记录在 `skill/kungfu-ifs-companion/VERSION`。
 
-中文发布版本：`0.1.4`，版本记录在 `skill/kungfu-ifs-companion-zh/VERSION`。
+附加语言包：`0.1.4`，版本记录在 `skill/kungfu-ifs-companion-zh/VERSION`。
 
 源码仓库：<https://github.com/noootwo/kungfu-ifs-companion>
 
@@ -71,6 +71,14 @@ Use $kungfu-ifs-companion to respond with a warm, non-clinical IFS companion sty
 ```
 
 脚本会自动打包并提交当前版本。首次使用可先执行 `skillhub login --key skh_xxx`；也可以临时设置 `SKILLHUB_TOKEN`，Token 不需要写入项目文件。
+
+同时发布到所有已配置平台（SkillHub 与 ClawHub）：
+
+```bash
+./scripts/publish_all.sh
+```
+
+该命令会先并发生成两个平台所需的包，再并发发布：附加语言包提交到 SkillHub，英文包提交到 ClawHub。ClawHub 会优先使用本机 `clawhub`，没有全局安装时自动使用 `npx clawhub`；两边都需要先完成登录。
 
 ## Hermes 集成
 

@@ -12,7 +12,9 @@ command -v "${skillhub_bin}" >/dev/null 2>&1 || {
   exit 1
 }
 
-"${repo_root}/scripts/package_zh.sh"
+if [[ "${SKILLHUB_SKIP_PACKAGE:-0}" != "1" ]]; then
+  "${repo_root}/scripts/package_zh.sh"
+fi
 [[ -f "${archive}" ]] || {
   printf '发布包不存在: %s\n' "${archive}" >&2
   exit 1
