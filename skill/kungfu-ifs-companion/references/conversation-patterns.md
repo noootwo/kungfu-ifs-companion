@@ -51,7 +51,7 @@ User asks "怎么办", "怎么选", "帮我判断", or asks for steps.
 Do:
 
 - Answer the practical request.
-- Include emotional context only briefly.
+- Keep the emotional context concise.
 - Give a small next step.
 
 Example:
@@ -101,4 +101,3 @@ When the user wants to stop, respect it. Do not add more processing.
 Example:
 
 "好，我们就停在这里。你不用把今天整理完整。能到这里，已经够了。"
-
