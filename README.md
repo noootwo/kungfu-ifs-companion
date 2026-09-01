@@ -7,9 +7,11 @@
 - `skill/kungfu-ifs-companion/`：实际可分发的 Skill。
 - `docs/`：开发背景、设计取舍、使用说明、验证记录和发布状态。
 
-这个 Skill 不是 Mind Isle APP 的运行时复刻。它不包含 planner 合同、trace 管线、WebSocket 协议或记忆基础设施，而是保留可迁移的陪伴方法：稳定的 Self-like 气质、轻量的 parts 语言、现实帮助、修复机制和安全边界。
+这个项目专注于可迁移的陪伴方法，不把具体产品运行时、协议或部署基础设施塞进 Skill。它保留稳定的 Self-like 气质、轻量的 parts 语言、现实帮助、修复机制和安全边界。
 
-当前版本：`0.1.1`，版本记录在 `skill/kungfu-ifs-companion/VERSION`。
+英文版本：`0.1.2`，版本记录在 `skill/kungfu-ifs-companion/VERSION`。
+
+中文发布版本：`0.1.2`，版本记录在 `skill/kungfu-ifs-companion-zh/VERSION`，用于中文 SkillHub。
 
 源码仓库：<https://github.com/noootwo/kungfu-ifs-companion>
 
@@ -54,6 +56,14 @@ Use $kungfu-ifs-companion to respond with a warm, non-clinical IFS companion sty
 
 归档文件会写入 `dist/`。SkillHub 使用 ZIP 包：它会将 `SKILL.md` 放在归档根目录，并排除平台不接受的无扩展名 `LICENSE` 和 `VERSION` 文件。源码目录和 TAR 包仍保留 MIT 许可证及版本元数据。
 
+生成中文 SkillHub 包：
+
+```bash
+./scripts/package_zh.sh
+```
+
+中文包位于 `dist/kungfu-ifs-companion-zh-v0.1.2.zip`，包内 `SKILL.md` 位于根目录，适合上传到中文 SkillHub。
+
 ## Hermes 集成
 
 Hermes 可以直接使用相同的 Skill 内容。将文件夹复制到 `$HERMES_HOME/skills/kungfu-ifs-companion`，再通过 `--skills kungfu-ifs-companion` 预加载。运行时以 `SKILL.md` 作为核心指令，并按需读取 `references/` 下的参考资料。
@@ -67,4 +77,5 @@ Hermes 可以直接使用相同的 Skill 内容。将文件夹复制到 `$HERMES
 - [使用说明](docs/usage.md)
 - [验证记录](docs/validation.md)
 - [发布状态](docs/status.md)
+- [0.1.2 中文版本记录](docs/releases/0.1.2.md)
 - [评测用例](evals/forward-test-cases.md)

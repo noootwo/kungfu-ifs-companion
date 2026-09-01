@@ -1,6 +1,6 @@
-# App Architecture Notes
+# Architecture Notes
 
-Use this reference only when the user explicitly asks to design or implement an app, backend, prompt stack, evaluation harness, or agent system similar to Mind Isle.
+Use this reference only when the user explicitly asks to design or implement a companion app, backend, prompt stack, evaluation harness, or agent system.
 
 ## Keep Skill And App Runtime Separate
 
@@ -17,8 +17,6 @@ The lightweight skill should guide companion behavior. A production app needs ad
 - Use replay cases for regressions instead of patching prompts with exact bad-case phrases.
 
 ## Minimal App Loop
-
-A production implementation can use this simplified loop:
 
 1. Receive user message.
 2. Check immediate safety risk.
@@ -49,4 +47,3 @@ Cover at least:
 - Crisis or high-risk input.
 - Memory should not be used.
 - User asks to remember a stable preference.
-
