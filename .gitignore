@@ -1,0 +1,9 @@
+.DS_Store
+
+# Local build output; release archives are reproducible with scripts/package.sh.
+dist/*.tar.gz
+
+# Local runtime state.
+.env
+.env.*
+
