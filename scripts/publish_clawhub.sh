@@ -30,7 +30,9 @@ fi
 source_commit="$(git -C "${repo_root}" rev-parse HEAD)"
 source_ref="$(git -C "${repo_root}" rev-parse --abbrev-ref HEAD)"
 
-"${clawhub_cmd[@]}" --no-input skill publish "${skill_dir}" \
+publish_output=""
+publish_status=0
+publish_output="$("${clawhub_cmd[@]}" --no-input skill publish "${skill_dir}" \
   --slug kungfu-ifs-companion \
   --name 'Kungfu IFS Companion' \
   --version "${version}" \
@@ -40,4 +42,12 @@ source_ref="$(git -C "${repo_root}" rev-parse --abbrev-ref HEAD)"
   --source-commit "${source_commit}" \
   --source-ref "${source_ref}" \
   --source-path skill/kungfu-ifs-companion \
-  --json
+  --json 2>&1)" || publish_status=$?
+printf '%s\n' "${publish_output}"
+
+if [[ "${publish_status}" -ne 0 ]] && printf '%s\n' "${publish_output}" | rg -i --quiet 'already exists|version.*exists|duplicate|pending-publication'; then
+  printf 'ClawHub 已存在或正在审核 %s，跳过重复提交。\n' "${version}"
+  exit 0
+fi
+
+exit "${publish_status}"

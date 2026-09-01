@@ -25,4 +25,14 @@ if [[ -n "${SKILLHUB_TOKEN:-}" ]]; then
   publish_args+=(--token "${SKILLHUB_TOKEN}")
 fi
 
-"${skillhub_bin}" publish "${publish_args[@]}"
+publish_output=""
+publish_status=0
+publish_output="$("${skillhub_bin}" publish "${publish_args[@]}" 2>&1)" || publish_status=$?
+printf '%s\n' "${publish_output}"
+
+if [[ "${publish_status}" -ne 0 ]] && printf '%s\n' "${publish_output}" | rg -F --quiet 'VERSION_EXISTS'; then
+  printf 'SkillHub 已存在 %s，跳过重复提交。\n' "$(basename "${archive}")"
+  exit 0
+fi
+
+exit "${publish_status}"

@@ -18,9 +18,9 @@
 
 | 平台 | 状态 | 说明 |
 | --- | --- | --- |
-| GitHub | 已发布 | 公开源码仓库：`noootwo/kungfu-ifs-companion`；最新提交为 `0297f98`。 |
+| GitHub | 已发布 | 公开源码仓库：`noootwo/kungfu-ifs-companion`；全平台发布脚本与幂等修复已推送。 |
 | Hermes | 进行中 | PR [#100197](https://github.com/NousResearch/hermes-agent/pull/100197) 已创建；本地发现和预加载验证通过，扫描结果为 `SAFE`。 |
-| ClawHub | 待发布 | 本机认证已恢复，`v0.1.4` 已生成，待全平台发布命令提交。 |
+| ClawHub | 已接收，待审核发布 | `v0.1.4` 已由全平台命令提交；返回 `versionId=k9717w6pc18t49gq60e9m7pk0s8djnsg`、`publicationStatus=pending`、`attemptId=zx7273ehrca4zt0q479nqxj6mh8djjtj`。公开查询暂仍显示 `v0.1.1`，等待平台处理完成。 |
 | 腾讯 SkillHub | 已提交，待审核 | `kungfu-ifs-companion@0.1.4` 已通过一键发布脚本提交成功；Skill ID 为 `179841`，版本 ID 为 `281229`，当前内容审核和安全扫描均为进行中。 |
 
 本文件只在完成新的命令或平台检查后更新状态。
