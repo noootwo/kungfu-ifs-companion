@@ -9,7 +9,9 @@ The project keeps two things separate:
 
 The skill is intentionally instruction-only. It does not recreate Mind Isle's app runtime, planner contracts, trace pipeline, WebSocket protocol, or memory infrastructure. Its job is to preserve the reusable companion method: Self-like presence, light parts language, repair, practical help, and safety-aware boundaries.
 
-Current release: `0.1.0`, recorded in `skill/kungfu-ifs-companion/VERSION`.
+Current release: `0.1.1`, recorded in `skill/kungfu-ifs-companion/VERSION`.
+
+Public source: `https://github.com/noootwo/kungfu-ifs-companion`.
 
 ## Install Locally
 
