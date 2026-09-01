@@ -5,20 +5,20 @@
 ## 版本信息
 
 - Skill：`kungfu-ifs-companion`
-- 英文版本：`0.1.2`
-- 中文版本：`0.1.2`
+- 英文版本：`0.1.3`
+- 中文版本：`0.1.3`
 - 许可证：MIT
 - 本地验证：`./scripts/validate.sh` 和 `./scripts/test_hermes_layout.sh` 已通过。
 - 中文本地验证：`./scripts/validate_zh.sh` 和 `./scripts/test_zh_layout.sh` 已通过。
-- 发布归档：由 `./scripts/package.sh` 生成；SkillHub 使用 ZIP 包，`SKILL.md` 位于归档根目录，并排除平台不接受的无扩展名 `LICENSE` 和 `VERSION` 文件。
+- 发布归档：由 `./scripts/package.sh` 和 `./scripts/package_zh.sh` 生成；ZIP 包的 `SKILL.md` 位于归档根目录，并排除平台不接受的无扩展名 `LICENSE` 和 `VERSION` 文件。
 
 ## 平台状态
 
 | 平台 | 状态 | 说明 |
 | --- | --- | --- |
-| GitHub | 已发布 | 公开源码仓库：`noootwo/kungfu-ifs-companion`；`v0.1.0` 和 `v0.1.1` 已发布。 |
+| GitHub | 已发布 | 公开源码仓库：`noootwo/kungfu-ifs-companion`；最新提交为 `0297f98`。 |
 | Hermes | 进行中 | PR [#100197](https://github.com/NousResearch/hermes-agent/pull/100197) 已创建；本地发现和预加载验证通过，扫描结果为 `SAFE`。 |
-| ClawHub | 旧英文版已提交，新清理版待提交 | 英文版 `Kungfu IFS Companion` v0.1.1 已于 2026 年 9 月 1 日通过 `@noootwo` 提交；平台返回 `pending-publication`，版本 ID 为 `k97280kf1yzrpx54be9ct9bhh98dkwd6`。去除历史来源痕迹后的英文 `v0.1.2` 已在本地生成，待后续提交更新。 |
-| 腾讯 SkillHub | 旧英文版审核中，清理后的中文版本待提交 | 英文版 `Kungfu IFS Companion` v0.1.1 已于 2026 年 9 月 1 日通过已认证的 `noootwo` 账号提交；去除历史来源痕迹后的中文包 `v0.1.2` 已在本地生成，待登录会话恢复后提交。 |
+| ClawHub | 待更新 | 已提交版本仍为 v0.1.1，新的 `v0.1.3` 已在本地生成，待账号会话恢复后提交。 |
+| 腾讯 SkillHub | 待提交 | `v0.1.3` 已在本地生成，待账号会话恢复后提交。 |
 
 本文件只在完成新的命令或平台检查后更新状态。

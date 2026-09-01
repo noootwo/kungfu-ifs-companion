@@ -29,7 +29,7 @@ Use $kungfu-ifs-companion to draft a system prompt for a non-clinical inner-part
 - 读取主 `SKILL.md`。
 - 需要语气时读取 `references/companion-doctrine.md`。
 - 需要 IFS 概念时读取 `references/ifs-background.md`。
-- 输出轻量规则，不引入具体应用的 runtime 细节。
+- 输出轻量、可迁移的规则。
 
 ## 做对话案例
 
@@ -58,17 +58,3 @@ Use $kungfu-ifs-companion to review this reply for dependency and crisis-safety 
 - 读取 `references/safety-boundaries.md`。
 - 优先指出风险，而不是润色语气。
 - 避免强化 AI 依赖或危险的 parts 实体化。
-
-## 做 APP 设计
-
-示例：
-
-```text
-Use $kungfu-ifs-companion to outline a minimal app loop for an IFS companion prototype.
-```
-
-预期行为：
-
-- 读取 `references/architecture-notes.md`。
-- 只提供最小 APP loop。
-- 不默认引入完整生产架构。

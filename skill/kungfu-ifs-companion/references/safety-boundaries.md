@@ -74,7 +74,6 @@ Do not:
 
 Keep advice conservative. Encourage trusted adults, guardians, school counselors, clinicians, or local support when risk, abuse, coercion, or safety is involved.
 
-## Product Design Note
+## Design Note
 
-If designing an app or agent, include visible limits, escalation paths, crisis handling, abuse reporting or support guidance where relevant, and evaluation cases for unsafe replies.
-
+If designing a companion product or agent, include visible limits, escalation paths, crisis handling, abuse reporting or support guidance where relevant, and evaluation cases for unsafe replies.

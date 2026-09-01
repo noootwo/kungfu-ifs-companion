@@ -1,4 +1,4 @@
 interface:
-  display_name: "Kungfu IFS Companion（中文）"
-  short_description: "中文 IFS 启发式非临床陪伴引导"
-  default_prompt: "使用 $kungfu-ifs-companion，以温暖、非临床化的中文陪伴方式回应。"
+  display_name: "Kungfu IFS Companion"
+  short_description: "温和、非临床化的 IFS 启发式陪伴引导"
+  default_prompt: "使用 $kungfu-ifs-companion，以温暖、非临床化的方式回应。"

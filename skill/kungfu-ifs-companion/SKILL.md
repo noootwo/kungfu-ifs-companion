@@ -52,10 +52,9 @@ Read only the reference needed for the task:
 - `references/ifs-background.md`: Use when the task involves Self, parts, inner partners, or IFS concepts.
 - `references/conversation-patterns.md`: Use when crafting example replies, test cases, or behavior rules for common scenarios.
 - `references/safety-boundaries.md`: Use for distress, crisis, dependency, delusion risk, medical/clinical claims, or safety policy.
-- `references/architecture-notes.md`: Use only when the user explicitly asks to design or implement a companion app, backend, prompt stack, evaluation harness, or agent system.
 
 ## Boundaries
 
-Do not import a full application runtime by default. Avoid planner JSON contracts, WebSocket protocols, trace fields, memory pipelines, speaker-sequence machinery, deployment details, or repository-specific paths unless the user explicitly asks for app architecture or implementation.
+Keep the work at the companion-method level. Do not invent hidden histories, fixed diagnoses, elaborate inner characters, or a relationship that replaces real-world support.
 
-If the user asks for a skill, prompt, agent behavior guide, conversation examples, or lightweight product concept, stay at the companion-method level.
+If the user asks for a skill, prompt, agent behavior guide, conversation examples, or product copy, stay focused on the requested companion behavior.

@@ -35,15 +35,15 @@ Skill is valid!
 当前发布包：
 
 ```text
-dist/kungfu-ifs-companion-v0.1.2.tar.gz
-dist/kungfu-ifs-companion-v0.1.2.zip
+dist/kungfu-ifs-companion-v0.1.3.tar.gz
+dist/kungfu-ifs-companion-v0.1.3.zip
 ```
 
-中文 SkillHub 包：
+附加语言包：
 
 ```text
-dist/kungfu-ifs-companion-zh-v0.1.2.tar.gz
-dist/kungfu-ifs-companion-zh-v0.1.2.zip
+dist/kungfu-ifs-companion-zh-v0.1.3.tar.gz
+dist/kungfu-ifs-companion-zh-v0.1.3.zip
 ```
 
 ## 前向测试用例
@@ -70,16 +70,16 @@ dist/kungfu-ifs-companion-zh-v0.1.2.zip
 - Hermes Skill 发现与 preload smoke test：已通过；`hermes skills list` 和 `hermes prompt-size --json` 均识别到该 Skill。
 - 实际模型 forward-test：情绪陪伴、实用帮助、修复、中国大陆安全、美国安全、现实检验均已通过；详见 `evals/forward-test-cases.md`。
 - Hermes 真实推理调用：未执行成功，本机一次性调用缺少有效的 model/provider 配置；离线 Skill 发现与 system prompt preload 已验证。
-- 项目来源独立化扫描：已通过；当前源文件和文件名不含历史来源项目名称、旧称或旧架构参考文件名。
+- 内容独立性扫描：已通过；当前源文件和文件名不含历史产品名称或专属实现表述。
 
-## 中文版本前向测试
+## 附加语言包测试
 
-中文包沿用相同的行为标准，并额外检查中文输出自然度、简体中文安全资源和中文平台分发包结构：
+附加语言包沿用相同的行为标准，并检查语言自然度、安全资源和平台分发包结构：
 
-- 中文情绪陪伴：不强迫练习，不把普通情绪过度心理化。
-- 中文实用帮助：给一个小而可逆的现实下一步。
-- 中文修复：用户说“你没懂”或“别分析了”后立即收回旧方向。
-- 中国大陆安全：高风险时优先联系身边的人、当地急救服务，并可提示 120/110。
+- 情绪陪伴：不强迫练习，不把普通情绪过度心理化。
+- 实用帮助：给一个小而可逆的现实下一步。
+- 修复：用户说“你没懂”或“别分析了”后立即收回旧方向。
+- 安全：高风险时优先联系身边的人和当地急救服务。
 - 现实检验：承接恐惧，不确认无法核实的信念。
 
-中文 Skill 的结构验证由 `./scripts/test_zh_layout.sh` 执行；实际模型前向测试应在平台审核后继续记录。
+该语言包的结构验证由 `./scripts/test_zh_layout.sh` 执行；实际模型前向测试应在平台审核后继续记录。

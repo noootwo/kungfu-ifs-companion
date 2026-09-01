@@ -12,21 +12,11 @@
 
 ## 为什么保持轻量
 
-官方 skill 设计更适合“可复用能力包”，而不是完整应用架构。`SKILL.md` 应该短、强、可触发；细节通过 references 渐进加载。
-
-因此第一版删除了这些 APP 级结构：
-
-- planner JSON 合同
-- 每轮显式内部决策输出
-- memory read/write 状态机
-- speaker sequence 编排
-- trace 字段
-- WebSocket / REST 协议
-- 部署和环境配置
+Skill 应该是可复用的能力包。`SKILL.md` 保持短、清楚、容易触发；具体语气、IFS 概念、对话案例和安全边界放在参考资料中。
 
 ## 保留什么
 
-保留的是更稳定、更可迁移的体验原则：
+保留的是稳定、可迁移的体验原则：
 
 - 用户只是表达时，先接住。
 - 用户问现实问题时，先回答。
@@ -45,12 +35,10 @@ skill/kungfu-ifs-companion/
   references/
 ```
 
-`SKILL.md` 是默认入口，references 按任务需要读取：
+`SKILL.md` 是入口，参考资料按任务需要读取：
 
 - 陪伴语气
 - IFS 背景
 - 常见对话模式
 - 安全边界
-- APP 架构备注
-
-这符合渐进披露：普通对话只加载主 skill；复杂设计或安全场景再读对应 reference。
+这样可以减少默认上下文，同时保留需要时的深度。

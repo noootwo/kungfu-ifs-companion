@@ -21,12 +21,12 @@ rm -f "${zip_archive}"
 staging_dir="$(mktemp -d)"
 trap 'rm -rf "${staging_dir}"' EXIT
 cp -R "${skill_dir}/." "${staging_dir}/"
-awk 'NR == 3 {
+awk -v version="${version}" 'NR == 3 {
   print
   print "slug: kungfu-ifs-companion"
-  print "version: 0.1.2"
-  print "displayName: Kungfu IFS Companion（中文）"
-  print "summary: 面向中文社区的温暖、非临床化 IFS 启发式心理陪伴 Skill。"
+  print "version: " version
+  print "displayName: Kungfu IFS Companion"
+  print "summary: 温暖、非临床化的 IFS 启发式陪伴 Skill。"
   print "license: MIT"
   print "homepage: https://github.com/noootwo/kungfu-ifs-companion"
   next
